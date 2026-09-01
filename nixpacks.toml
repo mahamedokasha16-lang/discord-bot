@@ -2,7 +2,7 @@
 nixPkgs = ["nodejs_20", "pnpm", "ffmpeg"]
 
 [phases.install]
-cmds = ["pnpm install --frozen-lockfile"]
+cmds = ["pnpm install --no-frozen-lockfile"]
 
 [start]
 cmd = "pnpm --filter @workspace/scripts run bot"
