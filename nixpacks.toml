@@ -4,5 +4,8 @@ nixPkgs = ["nodejs_20", "pnpm", "ffmpeg"]
 [phases.install]
 cmds = ["pnpm install --no-frozen-lockfile"]
 
+[phases.build]
+cmds = ["echo 'skipping build, bot runs via tsx directly'"]
+
 [start]
 cmd = "pnpm --filter @workspace/scripts run bot"
